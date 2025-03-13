@@ -1,22 +1,37 @@
-const UserName=(props)=> {
-  const UserName = "John";
-  console.log("props", props);
+// export function UserName(props) {
+//   const name = "John";
+//   console.log("props", props);
 
-  return (
-    <>
-      <h3>{props.UserName}</h3>
-      <p className={props.className}>{props.className}</p>
-    </>
-  );
-} 
-export default UserName;
-
-// export function userName(userName,className, bgColor){
 //   return (
 //     <>
-//     <h3 style="background-color:orange;">{userName+'verified'}</h3>
-//     <h3 style={{color:'red',backgroundColor:bgColor,}}>{userName+'verified'}</h3>
-//     <p className={className}>{className}</p>
+//       <h3>{props.UserName}</h3>
+//       <p className={props.className}>{props.className}</p>
 //     </>
-//   )
+
+//   );
 // }
+
+//using destructuring
+
+export function UserName(props) {
+  const { userName, className, bgColor } = props;
+  return (
+    <>
+    
+      {/* <h3 style="background-color:orange">{userName + "verified"}</h3> */}
+
+      <h3
+        style={{
+          color: "red",
+          // background-color:'green',
+          backgroundColor: bgColor,
+        }}
+      >
+        {userName +" "+ "verified"}
+      </h3>
+      <p className={className}>{className}</p>
+
+      
+    </>
+  );
+}

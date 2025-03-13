@@ -1,4 +1,7 @@
+export * from "./Counter";
+export * from './Events';
 export * from './LoginStatus';
-export * from './MyButton';
-export * from './UserName';
+export { MyButton } from './MyButton';
 export * from './ProductsList';
+export * from './UserName';
+
