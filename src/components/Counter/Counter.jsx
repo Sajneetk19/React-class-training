@@ -18,16 +18,37 @@ import { useState } from "react";
 
 // using usestate here
 
+// export function Counter() {
+//   const [count, setCount] = useState(0);
+//   function increment() {
+//     setCount(count + 1);
+//   }
+
+//   return (
+//     <>
+//       <p>Count: {count}</p>
+//       <button onClick={increment}>Increment</button>
+//     </>
+//   );
+// }
+
+// render same component multipe times here:-
 export function Counter() {
+  return (
+    <div>
+      <MyFunc />
+      <br></br>
+      <MyFunc />{" "}
+    </div>
+  );
+}
+
+function MyFunc() {
   const [count, setCount] = useState(0);
-  function increment() {
+  function myBtn() {
     setCount(count + 1);
   }
 
-  return (
-    <>
-      <p>Count: {count}</p>
-      <button onClick={increment}>Increment</button>
-    </>
-  );
+  return <button onClick={myBtn}> Click: {count}</button>;
 }
+

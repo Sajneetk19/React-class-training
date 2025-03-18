@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
+import Form from "./components/useStateHook/Form";
+import Practise from "./components/Bulb/Practise";
 // import UseState from "./components/useStateHook";
 // import MyButton from "./components/MyButton/MyButton";
 // import UserName from "./components/UserName/UserName";
-import { MyButton, UserName, ProductList, Counter } from "./components";
 const App = () => {
+  const [count,setCount] = useState(0);
+
+  const updateCount=()=>{
+    setCount(count+1);}
+  
   return (
     <>
       <h2>Hello React!</h2>
-      <MyButton />
+
+      {/* <Form/> */}
+      <Practise/>
+
+
+
+      {/* <MyButton />
       <UserName className="bg-green" a="test" userName="John" bgColor="green" />
       <UserName
         className="bg-green"
@@ -17,7 +29,13 @@ const App = () => {
         bgColor="orange"
       />
       <ProductList />
-      <Counter />
+      <Counter /> */}
+
+     {/* <MyButton count={count} onHandleCount={updateCount}/>
+     <MyButton count={count} onHandleCount={updateCount}/>
+     <MyButton2 count={count}/> */}
+
+     
     </>
   );
 };
