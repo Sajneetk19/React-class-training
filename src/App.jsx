@@ -1,25 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import Form from "./components/useStateHook/Form";
-import Practise from "./components/Bulb/Practise";
-// import UseState from "./components/useStateHook";
+import UseEffect from "./components/UseEffect/useEffect";
 // import MyButton from "./components/MyButton/MyButton";
 // import UserName from "./components/UserName/UserName";
+// import Practise from "./components/Bulb/Practise";
 const App = () => {
-  const [count,setCount] = useState(0);
 
-  const updateCount=()=>{
-    setCount(count+1);}
+//   const [count,setCount] = useState(0);
+
+//   function updateCount(){
+//     setCount(count+1);}
   
   return (
     <>
-      <h2>Hello React!</h2>
-
+    <UseEffect/>
+      {/* <h2>Hello React!</h2> */}
       {/* <Form/> */}
-      <Practise/>
-
-
-
+      {/* <Practise/> */}
       {/* <MyButton />
       <UserName className="bg-green" a="test" userName="John" bgColor="green" />
       <UserName
@@ -34,8 +31,8 @@ const App = () => {
      {/* <MyButton count={count} onHandleCount={updateCount}/>
      <MyButton count={count} onHandleCount={updateCount}/>
      <MyButton2 count={count}/> */}
+     {/* <Practise/> */}
 
-     
     </>
   );
 };
